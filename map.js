@@ -14,7 +14,7 @@ window.onload = function() {
 		var lat = parts[0];
 		var lon = parts[1];
 		if (lon > -106.76 && lon < -93.6 && lat < 36.53 && lat > 25.53) {
-			if (!(lat > 34.55 && lat < 40 && lon > -100 && lon < -94.75)) {
+			if (!(lat > 34.55 && lat < 40 && lon > -100 && lon < -90)) {
 				if (!(lat > 32 && lat < 40 && lon > -108 && lon < -103)) {
 					L.circleMarker([Number(parts[0]), Number(parts[1])], {
 						radius: 1,
