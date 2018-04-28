@@ -11,11 +11,19 @@ window.onload = function() {
 	locations.split("\n").forEach(l => {
 		var parts = l.split(",")
 		var color = parts[2] == 1.0 ? "blue" : "red"
-		L.circleMarker([Number(parts[0]), Number(parts[1])], {
-			radius: 2,
-		  	renderer: myRenderer,
-		  	color: color
-	  	}).addTo(mymap)
+		var lat = parts[0];
+		var lon = parts[1];
+		if (lon > -106.76 && lon < -93.6 && lat < 36.53 && lat > 25.53) {
+			if (!(lat > 34.55 && lat < 40 && lon > -100 && lon < -94.75) {
+				if (!(lat > 32 && lat < 40 && lon > -108 && lon < -103) {
+					L.circleMarker([Number(parts[0]), Number(parts[1])], {
+						radius: 1,
+					  	renderer: myRenderer,
+					  	color: color
+				  	}).addTo(mymap)
+				}
+			}
+		}
 	});
 }
 
